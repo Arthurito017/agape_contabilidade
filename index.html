@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Contabilidade consultiva em Brasília: Simples Nacional, Lucro Presumido e Lucro Real com atendimento personalizado. Fale com um especialista da Ágape Contabilidade.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.seusite.com.br/">
+
+  <title>Ágape Contabilidade</title>
+  <link rel="icon" href="img/Ágape_logo_e_cores-removebg-preview.png" type="image/png">
+  <link rel="apple-touch-icon" href="img/Ágape_logo_e_cores-removebg-preview.png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <style>
+    :root {
+      --azul-principal: #0c1d3c;
+      --dourado: #f0b323;
+      --branco: #ffffff;
+      --preto: #000000;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif, Arial, Helvetica;
+      background-color: var(--branco);
+      color: var(--preto);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* NAVBAR */
+    .custom-navbar {
+      background-color: var(--azul-principal);
+      color: var(--preto);
+      padding: 1rem 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      border-bottom: 2px solid #f0b323;
+    }
+
+    .custom-navbar .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo img {
+      max-height: 60px;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-menu a {
+      color: var(--branco);
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    .nav-menu a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--dourado);
+      transition: width 0.3s ease-in-out;
+    }
+
+    .nav-menu a:hover::after {
+      width: 100%;
+    }
+
+    .nav-menu a:hover {
+      color: var(--dourado);
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 2px;
+      background: var(--branco);
+      transition: 0.3s;
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background: var(--azul-principal);
+        flex-direction: column;
+        width: 100%;
+        transition: max-height 0.3s ease;
+        padding-left: 20px;
+        /* espaçamento à esquerda */
+        padding-bottom: 20px;
+        /* espaçamento inferior extra */
+        border-bottom: 2px solid #f0b323;
+        max-height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        opacity: 0;
+        transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s;
+      }
+
+      .nav-menu.open {
+        max-height: 300px;
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      html,
+      body {
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.6),
+          rgba(0, 0, 0, 0.6)),
+        url('./img/ChatGPT\ Image\ May\ 9\,\ 2025\,\ 01_53_14\ PM.png') center/cover no-repeat;
+      color: #ffffff;
+      height: 100%;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 2px solid #f0b323;
+      min-height: 100vh;
+    }
+
+
+
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      color: #f0b323;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero a {
+      background-color: #f0b323;
+      color: #fff;
+      padding: 0.75rem 2rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero a:hover {
+      background-color: #d89e1c;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        height: auto;
+        padding: 5rem 1.5rem 3rem;
+        /* mais espaço no topo, menos no rodapé */
+        background-position: center;
+        background-size: cover;
+      }
+
+      .hero-content {
+        padding: 1rem;
+      }
+
+      .hero h2 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+      }
+
+      .hero p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero a {
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+      }
+    }
+
+    .hero .btn-whatsapp {
+      font-size: 1rem;
+      padding: 0.75rem 2rem;
+      gap: 0.5rem;
+      display: inline-flex;
+      align-items: center;
+      border: none;
+      border-radius: 6px;
+      background-color: #25D366;
+      color: #fff;
+      font-weight: 600;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+    }
+
+    .hero .btn-whatsapp:hover {
+      transform: scale(1.05);
+      background-color: #1ebe5b;
+      box-shadow: 0 0 18px #25D366, 0 0 30px #25D366;
+    }
+
+
+
+    .hero .btn-whatsapp i {
+      color: #fff !important;
+      font-size: 1.2rem;
+    }
+
+
+
+    /* === SECTION SOBRE === */
+    #sobre {
+      background-color: #f9f9f9;
+      padding: 5rem 1.5rem;
+      border-bottom: 2px solid var(--dourado);
+    }
+
+    #sobre .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    #sobre img {
+      width: 240px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid var(--azul-principal);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    #sobre img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+    }
+
+    #sobre h2 {
+      font-size: 2.2rem;
+      color: var(--azul-principal);
+      margin-bottom: 1.2rem;
+      font-weight: 700;
+    }
+
+    #sobre p {
+      font-size: 1.15rem;
+      color: #333;
+      margin-bottom: 1rem;
+      line-height: 1.75;
+      letter-spacing: 0.2px;
+    }
+
+    #sobre .container>div {
+      flex: 1 1 300px;
+    }
+
+    /* === RESPONSIVO MODERNO === */
+    @media (max-width: 768px) {
+      #sobre {
+        padding: 4rem 1rem;
+      }
+
+      #sobre .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      #sobre img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 1.0rem;
+      }
+
+      #sobre p {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+      }
+
+      #sobre h2 {
+        font-size: 1.8rem;
+      }
+    }
+
+    #equipe {
+      background-color: #f5f5f5;
+      padding: 5rem 1.5rem;
+      border-bottom: 2px solid var(--dourado);
+    }
+
+    #equipe .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    #equipe .titulo-secao {
+      text-align: center;
+      color: var(--azul-principal);
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+    }
+
+    .bloco-equipe {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      margin-bottom: 4rem;
+      flex-wrap: wrap;
+    }
+
+    .bloco-equipe.inverso {
+      flex-direction: row-reverse;
+    }
+
+    .bloco-equipe .imagem {
+      flex: 1;
+      min-width: 180px;
+    }
+
+    .bloco-equipe .imagem img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    .bloco-equipe .texto {
+      flex: 1;
+      min-width: 240px;
+    }
+
+    .bloco-equipe .texto p {
+      font-size: 1.15rem;
+      line-height: 1.75;
+      color: #333;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .bloco-equipe {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .bloco-equipe.inverso {
+        flex-direction: column;
+      }
+
+      .bloco-equipe .texto p {
+        font-size: 1rem;
+      }
+    }
+
+    #servicos {
+      background-color: #f5f5f5;
+      padding: 5rem 1.5rem;
+      border-bottom: 2px solid var(--dourado);
+    }
+
+    #servicos .titulo-secao {
+      text-align: center;
+      color: var(--azul-principal);
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 2.5rem;
+      /* Aumentamos o espaçamento */
+    }
+
+    .cards-servicos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-bottom: 3rem;
+      padding: 0 0.5rem;
+      /* Leve margem lateral */
+    }
+
+    .card-servico {
+      background: #fff;
+      border-radius: 10px;
+      /* levemente menor */
+      padding: 1.5rem;
+      /* reduzido de 2rem */
+      text-align: center;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-servico:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+    }
+
+    .card-servico i {
+      font-size: 2rem;
+      /* ligeiramente menor */
+      color: var(--dourado);
+      margin-bottom: 1rem;
+    }
+
+    .card-servico h3 {
+      font-size: 1.15rem;
+      color: var(--azul-principal);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .card-servico p {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .servicos-cta {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .btn-saiba-mais {
+      background-color: var(--dourado);
+      color: var(--preto);
+      padding: 0.75rem 2rem;
+      font-weight: 600;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    }
+
+    .btn-saiba-mais:hover {
+      background-color: #e0a720;
+      transform: scale(1.04);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+    }
+
+    /* Responsivo */
+    @media (max-width: 576px) {
+      .btn-saiba-mais {
+        width: 100%;
+        display: inline-block;
+      }
+    }
+
+    #contato {
+      background-color: #fefefe;
+      padding: 5rem 1.5rem;
+      border-bottom: 2px solid var(--dourado);
+      text-align: center;
+    }
+
+    #contato .titulo-secao {
+      font-size: 2rem;
+      color: var(--azul-principal);
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+
+    .contato-grid {
+      display: flex;
+      gap: 2rem;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .mapa-contato {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .info-contato {
+      flex: 1;
+      min-width: 280px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      text-align: left;
+    }
+
+    .info-contato .info-item {
+  display: flex;
+  align-items: center;      /* Alinha verticalmente o ícone com o texto */
+  gap: 0.8rem;              /* Espaço entre o ícone e o texto */
+  font-size: 1.1rem;
+  color: #333;
+  flex-wrap: nowrap;        /* Impede quebra do texto abaixo do ícone */
+}
+
+
+    .info-contato .info-item i {
+      .info-contato .info-item i {
+        font-size: 1.3rem;
+        color: var(--dourado);
+        min-width: 20px;
+        /* mantém alinhado mesmo com ícones diferentes */
+      }
+
+    }
+
+    .contato-cta {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .btn-contato {
+      background-color: var(--dourado);
+      color: var(--preto);
+      padding: 0.75rem 2rem;
+      font-weight: 600;
+      font-size: 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-contato i {
+      margin-right: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .btn-contato:hover {
+      background-color: #e0a720;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .contato-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .info-contato {
+        text-align: center;
+        align-items: center;
+      }
+
+      .info-contato .info-item {
+        justify-content: center;
+      }
+
+      .btn-contato {
+        width: 100%;
+      }
+    }
+
+    .footer {
+      background-color: var(--azul-principal);
+      color: var(--branco);
+      padding: 4rem 1.5rem 2rem;
+      border-top: 2px solid var(--dourado);
+      font-size: 0.95rem;
+    }
+
+    .grid-footer {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-bloco h4 {
+      color: var(--dourado);
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-bloco p {
+      margin-bottom: 0.7rem;
+      line-height: 1.5;
+    }
+
+    .footer-bloco ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-bloco ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-bloco ul li a {
+      color: var(--branco);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-bloco ul li a:hover {
+      color: var(--dourado);
+    }
+
+    .footer-logo {
+      width: 160px;
+      margin-bottom: 1rem;
+    }
+
+    .redes-sociais {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .redes-sociais a {
+      color: var(--branco);
+      font-size: 1.6rem;
+      transition: color 0.3s ease;
+    }
+
+    .redes-sociais a:hover {
+      color: var(--dourado);
+    }
+
+    .footer-barra {
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 2rem;
+      padding-top: 1rem;
+      font-size: 0.85rem;
+      color: #ccc;
+    }
+
+    /* Responsivo */
+    @media (max-width: 576px) {
+      .footer-logo {
+        margin: 0 auto 1rem;
+      }
+
+      .footer-bloco {
+        text-align: center;
+      }
+
+      .redes-sociais {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="custom-navbar">
+    <div class="container">
+      <a href="#inicio" class="logo">
+        <img src="img/Ágape_logo_e_cores-removebg-preview.png" alt="Ágape Contabilidade">
+      </a>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+        <a href="#equipe">Nossa Equipe</a>
+      </nav>
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+
+
+  <!-- Hero -->
+  <section class="hero" id="inicio" data-aos="fade-up">
+    <div class="hero-content container">
+      <h2>Contabilidade inteligente para crescer com segurança e sem complicações</h2>
+      <p>Especialistas em Simples Nacional, Lucro Presumido e Lucro Real. Com atendimento personalizado e soluções
+        completas para sua empresa evoluir com tranquilidade.</p>
+
+      <a href="https://wa.me/5561983184468" class="btn-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        Fale com um Especialista
+      </a>
+    </div>
+  </section>
+
+
+  <section id="sobre" data-aos="fade-right">
+    <div class="container" style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
+
+      <!-- Foto de Gildezio -->
+      <div style="flex: 1; text-align: center;">
+        <img src="img/perfil.jpg" alt="Gildezio Silva Barroso"
+          style="width: 220px; height: 220px; object-fit: cover; border-radius: 50%; border: 2px solid var(--branco);">
+        <p><i>Gildezio Silva Barroso (CRC 026900/O-3)</i></p>
+      </div>
+
+      <!-- Texto -->
+      <div style="flex: 2;">
+        <h2>Sobre a Ágape</h2>
+        <p>
+          Fundada com propósito e ética, a Ágape Contabilidade é mais do que um escritório — é uma parceira estratégica
+          para empreendedores que desejam crescer com segurança.
+        </p>
+        <p>
+          À frente da Ágape está <strong>Gildezio Silva Barroso</strong> (CRC 026900/O-3), contador com sólida
+          experiência, reconhecido pela sua dedicação e atendimento personalizado. Com raízes firmes em Brasília e foco
+          em micro e pequenas empresas, ele acredita que contabilidade vai muito além dos números — é sobre construir
+          tranquilidade, clareza e possibilidades reais de evolução.
+        </p>
+        <p>
+          Seja você Simples Nacional ou uma empresa em transição para Lucro Presumido ou Real, aqui você encontra
+          uma contabilidade humana, acessível e estratégica. Porque na Ágape, a gente cuida da sua empresa como se fosse
+          nossa.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="equipe" data-aos="fade-up">
+    <div class="container">
+      <h2 class="titulo-secao">Nossa Equipe</h2>
+
+      <!-- Bloco 1 -->
+      <div class="bloco-equipe">
+        <div class="imagem">
+          <img src="img/escritorio 3.jpg" alt="Atendimento Ágape">
+        </div>
+        <div class="texto">
+          <p>
+            <strong>Relacionamento humano é nosso ponto de partida.</strong><br>
+            Cada cliente é único, e por isso oferecemos um atendimento verdadeiramente personalizado. Nossa equipe é
+            treinada para entender mais do que números: entendemos contextos, dores e sonhos.
+            Desde o primeiro contato, nossos especialistas constroem confiança com clareza e transparência — dois
+            valores que sustentam tudo o que fazemos.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bloco 2 -->
+      <div class="bloco-equipe inverso">
+        <div class="imagem">
+          <img src="img/escritorio2.jpg" alt="Análise contábil estratégica">
+        </div>
+        <div class="texto">
+          <p>
+            <strong>Da contabilidade tradicional à estratégia de verdade.</strong><br>
+            A equipe técnica da Ágape é formada por contadores experientes que vão além da entrega de obrigações
+            fiscais. Nós oferecemos diagnósticos contábeis, planejamento tributário e insights estratégicos, garantindo
+            que sua empresa cresça com equilíbrio e total segurança jurídica.
+            Utilizamos ferramentas modernas para entregar mais agilidade e precisão nos processos.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bloco 3 -->
+      <div class="bloco-equipe">
+        <div class="imagem">
+          <img src="img/escritorio1.jpg" alt="Time da Ágape em ação">
+        </div>
+        <div class="texto">
+          <p>
+            <strong>Um time alinhado com o sucesso do seu negócio.</strong><br>
+            A Ágape é feita por pessoas que acreditam que contabilidade é uma ponte para o crescimento. Nosso time se
+            reúne constantemente para revisar processos, aprimorar métodos e garantir que cada cliente receba não apenas
+            um serviço — mas uma parceria de verdade.
+            O sucesso do seu negócio é, sim, nosso principal indicador de resultado.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section id="servicos" data-aos="fade-up">
+    <div class="container">
+      <h2 class="titulo-secao">Nossos Serviços</h2>
+
+      <div class="cards-servicos">
+
+        <div class="card-servico">
+          <i class="fas fa-briefcase"></i>
+          <h3>Abertura de Empresas</h3>
+          <p>Cuidamos de todo o processo de legalização e abertura do seu CNPJ com agilidade e segurança.</p>
+        </div>
+
+        <div class="card-servico">
+          <i class="fas fa-file-invoice-dollar"></i>
+          <h3>Escrituração Fiscal</h3>
+          <p>Registro completo das operações fiscais e contábeis para manter sua empresa em conformidade.</p>
+        </div>
+
+        <div class="card-servico">
+          <i class="fas fa-users-cog"></i>
+          <h3>Folha de Pagamento</h3>
+          <p>Gestão de colaboradores, encargos, admissões, férias e obrigações trabalhistas mensais.</p>
+        </div>
+
+        <div class="card-servico">
+          <i class="fas fa-balance-scale"></i>
+          <h3>Consultoria Tributária</h3>
+          <p>Análise e orientação sobre regimes tributários: Simples Nacional, Lucro Presumido e Real.</p>
+        </div>
+
+        <div class="card-servico">
+          <i class="fas fa-chart-line"></i>
+          <h3>Planejamento Contábil</h3>
+          <p>Estratégia financeira e contábil para melhorar resultados, reduzir tributos e crescer com controle.</p>
+        </div>
+
+        <div class="card-servico">
+          <i class="fas fa-handshake"></i>
+          <h3>Atendimento Personalizado</h3>
+          <p>Tratamos cada cliente com atenção única, oferecendo soluções sob medida com agilidade e proximidade.</p>
+        </div>
+
+      </div>
+      <div class="servicos-cta">
+        <a href="https://wa.me/5561983184468" class="btn-saiba-mais" target="_blank">
+          Saiba mais
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" data-aos="zoom-in">
+    <div class="container">
+      <h2 class="titulo-secao">Entre em Contato</h2>
+
+      <div class="contato-grid">
+        <!-- Mapa -->
+        <div class="mapa-contato">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.16564673612!2d-48.0910972!3d-15.8076317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a37fcc1a87287%3A0x8a6db434cb7ad7cd!2s%C3%81gape%20Contabilidade!5e1!3m2!1spt-BR!2sbr!4v1746820131509!5m2!1spt-BR!2sbr"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!-- Informações -->
+        <div class="info-contato">
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Q 1 CONJUNTO E, SALA 201 – SDE – Taguatinga – DF</p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-phone-alt"></i>
+            <p>(61) 98318-4468</p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <p>agapecontabilidadebsb@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contato-cta">
+        <a href="https://wa.me/5561983184468" class="btn-contato" target="_blank">
+          <i class="fab fa-whatsapp"></i> Enviar mensagem no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer class="footer">
+    <div class="container grid-footer">
+
+      <!-- Bloco 1: Logo e resumo -->
+      <div class="footer-bloco">
+        <img src="img/Ágape_logo_e_cores-removebg-preview.png" alt="Logo Ágape" class="footer-logo">
+        <p>Especialistas em contabilidade consultiva, tributária e fiscal. Atendemos com excelência empresas do Simples
+          Nacional ao Lucro Real.</p>
+      </div>
+
+      <!-- Bloco 2: Links -->
+      <div class="footer-bloco">
+        <h4>Links Rápidos</h4>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#equipe">Equipe</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+
+      <!-- Bloco 3: Contatos -->
+      <div class="footer-bloco">
+        <h4>Contato</h4>
+        <p><i class="fas fa-map-marker-alt"></i> St. de Desenvolvimento Q 1 Econômico, CONJUNTO E SALA 201 - Taguatinga, Brasília - DF, 72145-105</p>
+        <p><i class="fas fa-phone-alt"></i> (61) 98318-4468</p>
+        <p><i class="fas fa-envelope"></i> agapecontabilidadebsb@gmail.com</p>
+      </div>
+
+      <!-- Bloco 4: Redes sociais -->
+      <div class="footer-bloco">
+        <h4>Redes Sociais</h4>
+        <div class="redes-sociais">
+          <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/5561983184468" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-barra">
+      <p>CNPJ: 58.758.352/0001-90 | CRC: 026900/O-3</p>
+      <p>&copy; 2025 Ágape Contabilidade — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('nav-menu').classList.toggle('open');
+    });
+  </script>
+  <script>
+    function ajustarPaddingHero() {
+      const navbar = document.querySelector('.custom-navbar');
+      const hero = document.querySelector('.hero');
+      if (navbar && hero) {
+        const navHeight = navbar.offsetHeight;
+        hero.style.paddingTop = navHeight + 'px';
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', ajustarPaddingHero);
+    window.addEventListener('resize', ajustarPaddingHero);
+  </script>
+
+
+</body>
+
+</html>
+
